@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Laptop Shop</title>
+    <link rel="stylesheet" type="text/css" href="../uom/css/register.css">
+</head>
+<body>
+
+    <header>
+        <h1>Laptop LK</h1>
+    </header>
+    
+    <nav>
+        <a href="../uom/home page.html">Home</a>
+        <a href="../uom/laptop.html">Laptops</a>
+        <a href="../uom/aboutus.html">About Us</a>
+        <a href="../uom/contactus.html">Contact Us</a>
+        <a href="../uom/register.html">Register</a>
+
+    </nav>
+
+    <section>
+        <h2>Register</h2>
+        <form id="registrationForm" onsubmit="registerUser(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <script>
+        function registerUser(event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Perform additional validation or send data to a server for registration
+
+            console.log("Registration details:", { username, email, password, confirmPassword });
+            alert("Registration successful!");
+        }
+    </script>
+
+   <footer>
+         &copy; 2024 Laptop LK. All rights reserved.
+   </footer>
+
+</body>
+
+</html>
